@@ -6,7 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@500&display=swap" rel="stylesheet">
 
-    <title>KZ task6</title>
+    <title>6task</title>
 </head>
 <body>
 <div class="main">
