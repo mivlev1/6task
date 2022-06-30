@@ -130,10 +130,6 @@
         </li>
     </ul>
 </nav>
-<footer class="foot">
-    <div id=contacts>
-        <h4>student of KUBSU 25/2</h4>
-    </div>
-</footer>
+
 </body>
 </html>
