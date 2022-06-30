@@ -227,9 +227,9 @@ else {
         setcookie('login', $login);
         setcookie('pass', $pass);
 
-        $user = 'u41733';
-        $pass_db = '6809062';
-        $db = new PDO('mysql:host=localhost;dbname=u41733', $user, $pass_db, array(PDO::ATTR_PERSISTENT => true));
+        $user = 'u41731';
+        $pass_db = '7439940';
+        $db = new PDO('mysql:host=localhost;dbname=u41731', $user, $pass_db, array(PDO::ATTR_PERSISTENT => true));
         $stmt1 = $db->prepare("INSERT INTO forms SET name = ?, email = ?, birthday = ?, 
       gender = ? , limb_number = ?, biography = ?, login = ?, pass_hash = ?");
         $stmt1 -> execute([$trimmedPost['name'], $trimmedPost['email'], $trimmedPost['birthday'],

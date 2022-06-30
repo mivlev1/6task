@@ -78,9 +78,9 @@
         }
 // Иначе, если запрос был методом POST, т.е. нужно сделать авторизацию с записью логина в сессию.
         else {
-            $user = 'u41733';
-            $pass = '6809062';
-            $db = new PDO('mysql:host=localhost;dbname=u41733', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+            $user = 'u41731';
+            $pass = '7439940';
+            $db = new PDO('mysql:host=localhost;dbname=u41731', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
             $stmt1 = $db->prepare('SELECT form_id, pass_hash FROM forms WHERE login = ?');
             $stmt1->execute([$_POST['login']]);
             $row = $stmt1->fetch(PDO::FETCH_ASSOC);

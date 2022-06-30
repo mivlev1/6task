@@ -22,9 +22,9 @@
         exit();
     }
 
-    $user = 'u41733';
-    $pass = '6809062';
-    $db = new PDO('mysql:host=localhost;dbname=u41733', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+    $user = 'u41731';
+    $pass = '7439940';
+    $db = new PDO('mysql:host=localhost;dbname=u41731', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 
     $login = trim($_SERVER['PHP_AUTH_USER']);
     $pass_hash = substr(hash("sha256", trim($_SERVER['PHP_AUTH_PW'])), 0, 20);
@@ -74,9 +74,9 @@
         }
     } else {
         if (array_key_exists('delete', $_POST)) {
-            $user = 'u41733';
-            $pass = '6809062';
-            $db = new PDO('mysql:host=localhost;dbname=u41733', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+            $user = 'u41731';
+            $pass = '7439940';
+            $db = new PDO('mysql:host=localhost;dbname=u41731', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
             $stmt1 = $db->prepare('DELETE FROM form_ability WHERE form_id = ?');
             $stmt1->execute([$_POST['uid']]);
             $stmt2 = $db->prepare('DELETE FROM forms WHERE form_id = ?');
@@ -137,9 +137,9 @@
             exit();
         }
 
-        $user = 'u41733';
-        $pass = '6809062';
-        $db = new PDO('mysql:host=localhost;dbname=u41733', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+        $user = 'u41731';
+        $pass = '7439940';
+        $db = new PDO('mysql:host=localhost;dbname=u41731', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
         $stmt1 = $db->prepare('UPDATE forms SET name=?, email=?, birthday=?, gender=?, limb_number=?, biography=? WHERE form_id = ?');
         $stmt1->execute([$values['name'], $values['email'], $values['birthday'], $values['gender'], $values['limbs'], $values['biography'], $_POST['uid']]);
 
