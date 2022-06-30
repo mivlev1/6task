@@ -94,9 +94,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // ранее в сессию записан факт успешного логина.
     if (!$hasErrors && !empty($_COOKIE[session_name()]) && !empty($_SESSION['login'])) {
 
-        $user = 'u41733';
-        $pass = '6809062';
-        $db = new PDO('mysql:host=localhost;dbname=u41733', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+        $user = 'u41731';
+        $pass = '7439940';
+        $db = new PDO('mysql:host=localhost;dbname=u41731', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
         $stmt1 = $db->prepare('SELECT name, email, birthday, gender, limb_number, biography FROM forms WHERE form_id = ?');
         $stmt1->execute([$_SESSION['uid']]);
         $row = $stmt1->fetch(PDO::FETCH_ASSOC);
@@ -202,9 +202,9 @@ else {
     if (!empty($_COOKIE[session_name()]) &&
         session_start() && !empty($_SESSION['login'])) {
 
-        $user = 'u41733';
-        $pass = '6809062';
-        $db = new PDO('mysql:host=localhost;dbname=u41733', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+        $user = 'u41731';
+        $pass = '7439940';
+        $db = new PDO('mysql:host=localhost;dbname=u41731', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
         $stmt1 = $db->prepare('UPDATE forms SET name=?, email=?, birthday=?, gender=?, limb_number=?, biography=? WHERE form_id = ?');
         $stmt1->execute([$values['name'], $values['email'], $values['birthday'], $values['gender'], $values['limbs'], $values['biography'], $_SESSION['uid']]);
 
